@@ -1,0 +1,18 @@
+# ipptool -4 -V 2.0 -t -v -d http://:631/ipp/print ipp_printer_attributes.test
+
+{
+	NAME "Request all printer attributes"
+
+	OPERATION Get-Printer-Attributes
+	GROUP operation-attributes-tag
+	ATTR charset attributes-charset utf-8
+	ATTR language attributes-natural-language en
+	ATTR uri printer-uri $uri
+    # ATTR keyword requested-attributes all
+	ATTR keyword requested-attributes printer-make-and-model,printer-name,printer-info,printer-uuid,printer-dns-sd-name,printer-wifi-ssid,printer-wifi-state,printer-firmware-name,printer-firmware-string-version,printer-firmware-version,printer-uptime
+
+	STATUS successful-ok
+
+
+	DISPLAY requested-attributes
+}
